@@ -15,7 +15,7 @@ import org.openqa.selenium.support.PageFactory;
 public class CartPage {
 
 	WebDriver driver;
-	
+
 
 	@FindBy(xpath = "//a[normalize-space()='Cart']")
 	WebElement lnk_Cart;
@@ -27,11 +27,11 @@ public class CartPage {
 
 	@FindBys(@FindBy(xpath = "//td[@class ='product-price']/span[1]"))
 	List<WebElement> txt_prices;
-	
+
 	@FindBys(@FindBy(xpath = "//td[@class='product-name']"))
 	List<WebElement> txt_products;
 
-	
+
 
 
 	public CartPage(WebDriver driver) {
@@ -57,13 +57,13 @@ public class CartPage {
 		String itemName = null;
 
 		ArrayList<Float> priceList = new ArrayList<Float>();
-		
+
 
 		for(int i = 0; i < pricesCount; i++) {			
 			String price = txt_prices.get(i).getText().replace("$", "");
 			priceList.add(Float.parseFloat(price));
 		}
-		
+
 		itemIdex = priceList.indexOf(Collections.min(priceList));
 		itemName = txt_products.get(itemIdex).getText();
 		System.out.println("Lowest price item name is: '" + itemName + "' and index is:"+ itemIdex);

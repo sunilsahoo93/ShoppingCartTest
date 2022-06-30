@@ -22,13 +22,13 @@ public class InitializationHooks {
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		
-		}
-	
+
+	}
+
 	@After
 	public void closeBrowser() {
 		driver.close();
 		System.out.println("Browser closed successfully");
 	}
 
-	}
+}

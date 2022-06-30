@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 monochrome = true,
 tags = "@Regression" ,
 plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
-)
+		)
 
 public class TestRunner {
 

@@ -56,7 +56,7 @@ public class ShoppingCartSteps {
 	public void i_am_able_to_remove_the_lowest_price_item_from_my_cart() throws Throwable {
 
 		cartpage.removeItem(lowestPriceItemIndex);
-		
+
 	}
 
 
